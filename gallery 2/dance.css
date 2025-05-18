@@ -1,0 +1,294 @@
+body, html {
+    background-color: #f0f2f5;
+    color: #5f5f5f;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.logo img{
+    width: 30px;
+    margin-right: 15px;
+    display: block;
+}
+.navbar-center ul li{
+ display:  inline-block;
+ list-style: none;
+}
+.navbar-center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 8px;
+    padding-right: 5px;
+    position: relative;
+  
+}
+.navbar-center ul li a img{
+    width: 30px;
+}
+.navbar-center ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 2px;
+    background:#ff8d00;
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+}
+.navbar-center ul li a:focus::after {
+    width: 100%;
+}
+
+.navbar-center ul li a:hover::after,
+.navbar-center ul li a.active-link::after
+{
+    width: 100%;
+}
+
+.nav-profile-img{
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+.online{
+    position: relative;
+
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background: #41db51;
+    position: absolute;
+}
+.search-box{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+.search-box img{
+    width: 14px;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+
+section {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.post{
+    background: #fff;
+    padding: 20px 25px 5px;
+    margin: 5px 0 15px;
+    width: 60%;
+    border-radius: 25px;
+    margin: 5px auto 15px;
+
+}
+.post-author{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.post-author img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.post-author h1{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.post-author small{
+    display: block;
+    margin-bottom: -2px;
+}
+.post p{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.post-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+}
+.post-stats div{
+    display: flex;
+    align-items: center;
+}
+.post-stats img{
+    width: 15px;
+    margin-right: -5px;
+}
+.liked-users{
+    margin-left: 10px;
+}
+
+.post-activity{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.post-activity div{
+    display: flex;
+    align-items: center;
+}
+.post-activity-user-icon{
+    width: 22px;
+    border-radius: 50%;
+}
+.post-activity-arrow-icon{
+    width: 12px;
+    margin-left: 5px;
+}
+.post-activity-link img{
+ width: 18px;
+ margin-right: 8px;
+}
+
+.fullscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Ensures space between the two elements */
+    align-items: flex-start; /* Aligns items at the top */
+    padding: 20px;
+    gap: 20px; /* Optional: adds space between the children */
+}
+
+#artists, .theme-image {
+    flex: 1;
+}
+#artists {
+    /* Adds a subtle shadow around the entire 'artists' section, not just the grid */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #fff;  /* Optional: adds a background color */
+    border-radius: 25px; /* Optional: rounds the corners of the border */
+    padding: 20px;  /* Adds space around the content inside the border */
+    margin: 20px; /* Adds space around the outside of the section */
+    width: 55%;
+}
+.theme-image img {
+    height: auto;
+    border-radius: 25px; /* Optional, for consistency with #artists */
+    float: right;
+    margin: 20px;
+}
+
+.artist-grid {
+    border: 2px solid #ccc; /* Adds a solid border */
+    padding: 20px;  /* Adds padding inside the grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.artist-profile {
+    display: flex; /* Enables flexbox layout within each artist profile */
+    align-items: center; /* Vertically aligns items in the middle */
+    margin-bottom: 20px; /* Adds space between each artist profile */
+    padding: 10px; /* Padding around the content for spacing */
+    border: 1px solid #ccc; /* Optional: adds a border around each profile */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 25px;
+}
+
+.artist-profile img {
+    width: 100px; /* Sets the image width */
+    height: auto; /* Maintains the aspect ratio */
+    margin-right: 10px; /* Adds space between the image and the text */
+    border-radius: 50%; /* Optional: makes the image circular */
+}
+
+.artist-profile div {
+    flex-grow: 1; /* Allows the text container to fill the available space */
+}
+
+
+.artist-profile h3 {
+    color: #333;
+}
+
+.artist-profile p {
+    font-size: 14px;
+    color: #666;
+}
+
+.artist-profile a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+
+.reels-container {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.reels-container video {
+    flex-shrink: 0;
+    width: 20%; /* Sets the width of each video to 20% of the container width */
+    height: 300px; /* Sets a fixed height of 300px for each video */
+    box-sizing: border-box;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+}

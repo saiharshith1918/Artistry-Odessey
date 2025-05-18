@@ -1,0 +1,346 @@
+<?php
+include("connection.php");
+session_start();  // Start the session at the beginning of the script
+
+if (!isset($_SESSION['user_id'])) {
+    // Redirect to login page if the user is not logged in
+    header('Location: home.php');
+    exit;
+} ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance art  Gallery</title>
+    <link rel="stylesheet" href="painting.css">
+</head>
+<body>
+    <nav class="navbar">
+                <div class="navbar-left">
+                    <a href="index.html" class="logo"><img src="images/logo.jpeg" alt=""></a>
+        
+                    <div class="search-box">
+                        <img src="images/search.png" alt="">
+                        <input type="text" placeholder="Search">
+                    </div>
+        
+                </div>
+                <div class="navbar-center">
+                    <ul>
+                        <li><a href="#" class="active-link"><img src="images/home.png" alt=""><span>Home</span></a></li>
+                        <li><a href="#"><img src="images/trending.svg" alt=""><span>Treading</span></a></li>
+                        <li><a href="Drawing App JavaScript/index.html"><img src="images/create.png" alt=""><span>create Art</span></a></li>
+                        <li><a href="#"><img src="images/reels.png" alt=""><span>reels</span></a></li>
+                        <li><a href="#"><img src="images/notification.png" alt=""><span>Notifications</span></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <div class="online">
+                        <img src="images/user-1.png" class="nav-profile-img" onclick="toggleMenu()">
+                    </div>
+                </div>            
+    </nav>
+    <div class="content-wrapper">
+        <section id="artists">
+            <h2>Popular Artists</h2>
+            <div class="artist-grid">
+                <!-- Dynamically loaded artist profiles will go here -->
+            </div>
+        </section>
+        <div class="theme-image">
+            <img src="dance.jpg" alt="Artistic Representation">
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-author">
+            <img src="users/dance1.jpg" >
+            <div>
+                <h1>Indian Art</h1>
+                <small>Everything related to Indian Art and Architecture.</small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p>BEAUTIFUL .. !!! ❤️
+            Traditional Indian costume, jewelry and hair ornaments for traditional dance.</p>
+        <img src="posts/dance1.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhijith and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/dance2.jpg" >
+            <div>
+                <h1>Ministry of Culture</h1>
+                <small>Official account of Ministry of Culture (Govt. of India)</small>
+                <small>now</small>
+            </div>
+        </div>
+        <p>Featuring an enchanting still from Kathakali- an Indian traditional dance, shot by hj_clicks95 (IG), today’s #PicOfTheDay reflects the rich culture of #IncredibleIndia.
+
+            To get featured, tag us in your pictures & videos & use #OurCultureOurPride in the caption.
+            
+            #AmritMahotsav</p>
+        <img src="posts/dance2.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">danny and 75 others</span>
+            </div>
+            <div>
+                <span>568 comments &middot; 101 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>    
+
+
+    <section id="reels">
+        <h2><img src="images/reels.png"width="27" height="27" alt=""><span>Reels</span></h2>
+        <div class="reels-container">
+            <!-- Dynamically loaded reels will go here -->
+        </div>
+    </section>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/dance3.png" >
+            <div>
+                <h1>lonelyplanet_in</h1>
+                <small>Indian traveller</small>
+                <small></small>
+            </div>
+        </div>
+        <p>Celebrating the exquisite Indian traditional dance forms, Khajuraho Dance Festival takes place at the UNESCO world heritage site, Khajuraho temple situated in Madhya Pradesh.</p>
+        <img src="posts/dance3.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">bunny and 75 others</span>
+            </div>
+            <div>
+                <span>1 comment &middot; 1 share</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/dance4.jpg" >
+            <div>
+                <h1>Ministry of Railways</h1>
+                <small>Official Account of the Ministry of Railways, Government of India.</small>
+                <small>April 29</small>
+            </div>
+        </div>
+        <p>Observing #InternationalDanceDay, Indian Railways recognises the varied genres of dance as a discipline and honours the artists affiliated with this realm of art.</p>
+        <img src="posts/dance4.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">PIB India and 368 others</span>
+            </div>
+            <div>
+                <span>16 comments &middot; 258 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/dance5.jpg" >
+            <div>
+                <h1>India In Brazil</h1>
+                <small>This is the official page of the Embassy of India, Brazil. Esta é a página oficial do da Embaixada da Índia, Brasil.</small>
+                <small>April 15</small>
+            </div>
+        </div>
+        <p>Bharatanatyam Bridges 🇮🇳 🇧🇷 Cultures
+
+            #IndiaInBrazil organized a spellbinding evening of Bharatanatyam with Brazilian dancer Mirabai and her disciples.
+            
+            Over 100 Indian dance enthusiasts from Brazil participated. </p>
+        <img src="posts/dance5.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+
+    <footer>
+        <p>Copyright © 2021 Art Paintings Gallery</p>
+    </footer>
+
+    <script src="dance.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReels();
+        });
+    </script>   
+
+</body>
+</html>

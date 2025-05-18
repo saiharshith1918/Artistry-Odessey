@@ -1,0 +1,444 @@
+body {
+    background: #e2f1ed;
+  }
+  
+  .stories-container {
+    max-width: 600px;
+    margin: 24px auto;
+    position: relative;
+  }
+  
+  .stories-container .previous-btn,
+  .stories-container .next-btn,
+  .stories-full-view .previous-btn,
+  .stories-full-view .next-btn {
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #444;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+  }
+  
+  .stories-container .previous-btn,
+  .stories-container .next-btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+  
+  .stories-container .previous-btn.active,
+  .stories-container .next-btn.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .stories-container .previous-btn,
+  .stories-full-view .previous-btn {
+    left: 8px;
+  }
+  
+  .stories-container .next-btn,
+  .stories-full-view .next-btn {
+    right: 8px;
+  }
+  
+  .stories-container .story {
+    height: 180px;
+    width: 120px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .stories-container .story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .stories-container .stories {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .stories-container .content {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  
+  .stories-container .content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .stories-container .author {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(transparent, #222 130%);
+  }
+  
+  .stories-full-view {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    place-items: center;
+  }
+  
+  .stories-full-view.active {
+    display: grid;
+  }
+  
+  .stories-full-view .close-btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 30px;
+    background: #444;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    z-index: 20;
+    cursor: pointer;
+  }
+  
+  .stories-full-view .content {
+    height: 90vh;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+  }
+  
+  .stories-full-view .story {
+    height: 100%;
+    text-align: center;
+  }
+  
+  .stories-full-view .story img {
+    height: 100%;
+    aspect-ratio: 10/16;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  
+  .stories-full-view .author {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 32px;
+    border-radius: 8px;
+  }
+  
+  *{
+    margin: 0;
+   padding: 0;
+   font-family: 'poppins', sans-serif;
+   box-sizing: border-box;
+  }
+  body{
+    background-color: #f0f2f5;
+    color: #5f5f5f;
+  }
+  a{
+    text-decoration: none;
+    color: #5f5f5f;
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .logo img{
+    width: 30px;
+    margin-right: 15px;
+    display: block;
+  }
+  .navbar-center ul li{
+  display:  inline-block;
+  list-style: none;
+  }
+  .navbar-center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 8px;
+    padding-right: 5px;
+    position: relative;
+  
+  }
+  .navbar-center ul li a img{
+    width: 30px;
+  }
+  .navbar-center ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 2px;
+    background:#ff8d00;
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+  }
+  .navbar-center ul li a:hover::after,
+  .navbar-center ul li a.active-link::after
+  {
+    width: 100%;
+  }
+  
+  .nav-profile-img{
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+  .online{
+    position: relative;
+  
+  }
+  .online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    background: #41db51;
+    position: absolute;
+  }
+  .search-box{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+  }
+  .navbar-left{
+    display: flex;
+    align-items: center;
+  }
+  .search-box img{
+    width: 14px;
+  }
+  .search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+  }
+  
+  .navbar {
+    height: 50px; /* Adjust this value to change the height of the navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .profile-menu-wrap {
+    position: absolute;
+    top: 60px; /* Adjust this to move the menu up or down */
+    right: 10px; /* Adjust this to move the menu left or right */
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 240px; /* Adjust width as needed */
+    display: none; /* Keeps it hidden until toggled */
+  }
+  
+  .profile-menu {
+    padding: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .profile-menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #333;
+    text-decoration: none;
+  }
+
+
+  /*add code*/
+  .close-btn {
+    position: absolute; /* adjust positioning to your preference */
+    top: 20px; /* distance from the top */
+    right: 50%; /* center align */
+    transform: translateX(50%); /* fine-tune center alignment */
+    background-color: red; /* make the button red */
+    padding: 12px 16px; /* increase padding for a bigger button */
+    cursor: pointer; /* cursor indication for clickable element */
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.close-btn svg {
+    width: 26px; /* increase the size of the SVG icon */
+    height: 26px;
+}
+
+.trending-today {
+    width: 600px; /* Set the width to match the stories section */
+    margin: 20px auto; /* Center the box if that's desirable */
+    background-color: #f8f9fa; /* light background for the box */
+    border: 1px solid #ddd; /* subtle border */
+    padding: 20px; /* ample padding for spacing */
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* soft shadow for depth */
+    text-align: center; /* center the text and content */
+}
+
+
+.trending-today h2 {
+    color: #333; /* dark color for headline */
+    margin-bottom: 10px; /* space below the headline */
+}
+
+#date-time-display {
+    font-size: 18px; /* larger font size for readability */
+    color: #555; /* medium contrast for the date-time */
+    font-weight: bold; /* make the date-time bold */
+}
+
+
+.trending-topics {
+    list-style: none; /* remove default list style */
+    padding: 0; /* remove default padding */
+    margin-top: 20px; /* space between date-time and topics */
+}
+
+.trending-topics li {
+    background-color: #fff; /* white background for each topic */
+    border: 1px solid #ccc; /* subtle border for the topics */
+    padding: 10px 15px; /* padding inside each topic */
+    margin-bottom: 10px; /* space between topics */
+    border-radius: 5px; /* rounded corners for the topics */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* light shadow for depth */
+    transition: background-color 0.3s; /* smooth transition for hover effects */
+}
+
+.trending-topics li:hover {
+    background-color: #f0f0f0; /* change background on hover */
+    cursor: pointer; /* indicate that the items are interactive */
+}
+
+@media (max-width: 768px) {
+    .trending-today {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .trending-today {
+        width: 600px; /* Fixed width on larger screens */
+    }
+}
+
+.social-media-post {
+    width: 600px; /* Set the width to match the "Trending Today" section */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px auto; /* Centering the post box */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-details strong {
+    display: block;
+    color: #333;
+}
+
+.user-details span {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.post-content p {
+    margin-top: 0;
+}
+
+.content-image {
+    width: 100%; /* Full width of the post */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.post-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.post-actions button:hover {
+    background-color: #0056b3;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

@@ -1,0 +1,110 @@
+/*body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  /*  grid-auto-rows: minmax(100px, auto); /* rows of at least 100px */
+    /*gap: 10px;
+    height: 800px; /* Adjust based on your need */
+   /* overflow-y: scroll; /* Enables vertical scrolling */
+    /*padding: 10px;
+    border: 1px solid #ccc; /* Adds a border around the grid */
+    /*width: 20%; /* Adjust the width to 20% of the webpage */
+    /*float: right; /* Aligns the grid to the right */
+    /*position: sticky;
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+    border: 1px solid black; /* Adds a border around each grid item */
+   /* position: relative;
+    cursor: pointer;
+}
+
+.grid-item img {
+    width: 100%;
+    display: block; /* Ensures the image does not have extra space below it */
+   /* object-fit: cover; /* Ensures the image covers the grid item */
+/*}
+
+.caption {
+    text-align: center; /* Centers the caption text */
+   /* padding: 5px; /* Adds some padding around the text */
+   /* background-color: #f0f0f0; /* Gives a background color for contrast */
+/*}*/
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 20%;
+    float: right;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scroll */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    border-left: 1px solid #ccc;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.grid-container {
+    width: 100%;
+    overflow: hidden; /* No scrolling inside the grid itself */
+}
+
+.grid-item {
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.caption {
+    text-align: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+}
+
+/* Main Content */
+.main-content {
+    float: left;
+    width: 60%;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scroll */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Additional responsive and aesthetic styles */
+@media (max-width: 768px) {
+    .right-sidebar, .main-content, .left-sidebar {
+        float: none;
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+}
+

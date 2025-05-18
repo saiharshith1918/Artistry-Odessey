@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Paintings Gallery</title>
+    <link rel="stylesheet" href="painting.css">
+</head>
+<body>
+    <nav class="navbar">
+                <div class="navbar-left">
+                    <a href="index.html" class="logo"><img src="images/logo.jpeg" alt=""></a>
+        
+                    <div class="search-box">
+                        <img src="images/search.png" alt="">
+                        <input type="text" placeholder="Search">
+                    </div>
+        
+                </div>
+                <div class="navbar-center">
+                    <ul>
+                        <li><a href="#" class="active-link"><img src="images/home.png" alt=""><span>Home</span></a></li>
+                        <li><a href="#"><img src="images/trending.svg" alt=""><span>Treading</span></a></li>
+                        <li><a href="Drawing App JavaScript/index.html"><img src="images/create.png" alt=""><span>create Art</span></a></li>
+                        <li><a href="#"><img src="images/reels.png" alt=""><span>reels</span></a></li>
+                        <li><a href="#"><img src="images/notification.png" alt=""><span>Notifications</span></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <div class="online">
+                        <img src="images/user-1.png" class="nav-profile-img" onclick="toggleMenu()">
+                    </div>
+                </div>            
+    </nav>
+    <div class="content-wrapper">
+        <section id="artists">
+            <h2>Popular Artists</h2>
+            <div class="artist-grid">
+                <!-- Dynamically loaded artist profiles will go here -->
+            </div>
+        </section>
+        <div class="theme-image">
+            <img src="painting.jpg" alt="Artistic Representation">
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-author">
+            <img src="images/network.png" >
+            <div>
+                <h1>Anand Artistry </h1>
+                <small></small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p>Coffee painting of MS Dhoni & Virat Kohli. </p>
+        <img src="posts/painting1.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/painting2.jpg" >
+            <div>
+                <h1>Artist Sivabalan </h1>
+                <small>Contemporary Indian artist, vibrant & highly realistic paintings.</small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p>“My interest was always with registering paintings which reminds you about our culture, tradition and rural lifestyle. With the fast pace changes we see in our city lifestyle, my paintings would show how people were living for coming generations.”</p>
+        <img src="posts/painting2.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>    
+
+
+    <section id="reels">
+        <h2><img src="images/reels.png"width="27" height="27" alt=""><span>Reels</span></h2>
+        <div class="reels-container">
+            <!-- Dynamically loaded reels will go here -->
+        </div>
+    </section>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="images/network.png" >
+            <div>
+                <h1> HARSHITH </h1>
+                <small></small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p>National painting of Indian Kids..!!!</p>
+        <img src="posts/painting3.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/painting4.jpg" >
+            <div>
+                <h1>Bihar_se_hai</h1>
+                <small></small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p>Nandalal Bose, known for his painting hailed from Tarapur in Munger 🙌
+
+            He took the historical task of beautifying the Constitution of India. He painted the first page of all 22 parts of the constitution.
+            
+            Here is the Preamble of Indian Constitution</p>
+        <img src="posts/painting4.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/painting5.jpg" >
+            <div>
+                <h1>Anurag Shukla</h1>
+                <small>Education | Public Policy | Management</small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p> The success of every websites depends on search engine optimisation and digital marketing strategy. If you are on first page of all major search engines then you are ahead amoung your competitors.</p>
+        <img src="posts/painting5.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhiram and 5 others</span>
+            </div>
+            <div>
+                <span>1 comment &middot; 2 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+
+    <footer>
+        <p>Copyright © 2021 Art Paintings Gallery</p>
+    </footer>
+
+    <script src="painting.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReels();
+        });
+    </script>   
+
+</body>
+</html>

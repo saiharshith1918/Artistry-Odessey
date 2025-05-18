@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singing art Gallery</title>
+    <link rel="stylesheet" href="painting.css">
+</head>
+<body>
+    <nav class="navbar">
+                <div class="navbar-left">
+                    <a href="index.html" class="logo"><img src="images/logo.jpeg" alt=""></a>
+        
+                    <div class="search-box">
+                        <img src="images/search.png" alt="">
+                        <input type="text" placeholder="Search">
+                    </div>
+        
+                </div>
+                <div class="navbar-center">
+                    <ul>
+                        <li><a href="#" class="active-link"><img src="images/home.png" alt=""><span>Home</span></a></li>
+                        <li><a href="#"><img src="images/trending.svg" alt=""><span>Treading</span></a></li>
+                        <li><a href="Drawing App JavaScript/index.html"><img src="images/create.png" alt=""><span>create Art</span></a></li>
+                        <li><a href="#"><img src="images/reels.png" alt=""><span>reels</span></a></li>
+                        <li><a href="#"><img src="images/notification.png" alt=""><span>Notifications</span></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <div class="online">
+                        <img src="images/user-1.png" class="nav-profile-img" onclick="toggleMenu()">
+                    </div>
+                </div>            
+    </nav>
+    <div class="content-wrapper">
+        <section id="artists">
+            <h2>Popular Artists</h2>
+            <div class="artist-grid">
+                <!-- Dynamically loaded artist profiles will go here -->
+            </div>
+        </section>
+        <div class="theme-image">
+            <img src="singing.jpg" alt="Artistic Representation">
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-author">
+            <img src="users/dance2.jpg" >
+            <div>
+                <h1>Ministry of Culture</h1>
+                <small>Official account of Ministry of Culture (Govt. of India)</small>
+                <small>20 h</small>
+            </div>
+        </div>
+        <p>The rare distinction #PankajMullick earned as a music director, singer & actor in one- has few parallels even today. 
+
+            Our tribute to this genius of Indian cinema on his birth anniversary today.
+            
+            #AmritMahotsav</p>
+        <img src="posts/singing1.jpeg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and  others</span>
+            </div>
+            <div>
+                <span>4 comments &middot; 11 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/singing2.jpg" >
+            <div>
+                <h1>PIB India</h1>
+                <small>Press Information Bureau. Nodal agency for communicating to media on behalf of #Government of #India.</small>
+                <small>Apr 22</small>
+            </div>
+        </div>
+        <p> Iconic singer Usha Uthup receives #PadmaBhushan from President #DroupadiMurmu at Rashtrapati Bhawan 
+
+            She is popular as Queen of Indian Pop - known for her versatile voice and diverse repertoire, transcends genres 
+            
+            #PeoplesPadma #PadmaAwards2024</p>
+        <img src="posts/singing2.webp" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Akshay and 56 others</span>
+            </div>
+            <div>
+                <span>2 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>    
+
+
+    <section id="reels">
+        <h2><img src="images/reels.png"width="27" height="27" alt=""><span>Reels</span></h2>
+        <div class="reels-container">
+            <!-- Dynamically loaded reels will go here -->
+        </div>
+    </section>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/singing3.svg" >
+            <div>
+                <h1>The Hindu</h1>
+                <small>Indian music composer, record producer, singer, and philanthropist</small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p> The success of every websites depends on search engine optimisation and digital marketing strategy. If you are on first page of all major search engines then you are ahead amoung your competitors.</p>
+        <img src="posts/singing3.jpg" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Akshay and 5 others</span>
+            </div>
+            <div>
+                <span>2 comments &middot; 10 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>
+    
+    <div class="post">
+        <div class="post-author">
+            <img src="users/singing4.jpeg" >
+            <div>
+                <h1>A R Rahaman</h1>
+                <small>Indian music composer, record producer, singer, and philanthropist</small>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+        <p> LIVE concert at Kuala Lumpur!!!
+             27th July 2024
+        </p>
+        <img src="posts/singing4.webp" width="100%">
+
+        <div class="post-stats">
+            <div>
+                <img src="images/thumbsup.png" >
+                <img src="images/love.png" >
+                <img src="images/clap.png" >
+                <span class="liked-users">Abhinav Mishra and 75 others</span>
+            </div>
+            <div>
+                <span>22 comments &middot; 40 shares</span>
+            </div>
+            
+        </div>
+        <div class="post-activity">
+            <div>
+                <img src="images/user-1.png" class="post-activity-user-icon">
+                <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+            </div>
+            <div class="post-activity-link">
+                <img src="images/like.png" >
+                <span>Like</span>
+            </div>
+
+            <div class="post-activity-link">
+                <img src="images/comment.png" >
+                <span>comment</span>
+            </div >
+
+            <div class="post-activity-link">
+                <img src="images/share.png" >
+                <span>Share</span>
+            </div>
+
+            <div class="post-activity-link">  
+                <img src="images/send.png" >
+                <span>Send</span>
+            </div>
+        </div>
+      
+    </div>    
+    
+    <footer>
+        <p>Copyright © 2021 Art Paintings Gallery</p>
+    </footer>
+
+    <script src="singing.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReels();
+        });
+    </script>   
+
+</body>
+</html>
