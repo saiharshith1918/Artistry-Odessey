@@ -61,8 +61,4 @@ Future scope: implement OAuth login, two-factor authentication, and CSRF protect
 🌍 Multi-language support
 
 
-📬 Contact
-Developer: [Jogu Sai kethan]
-Email: saikethanjogu@gmail.com
-
 
